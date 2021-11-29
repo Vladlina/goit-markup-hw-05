@@ -703,7 +703,38 @@ address {
   color: var(--first-text-color);
 }
 
-.cards-thumb:hover::before {
+.cards-thumb {
+  position: relative;
+}
+
+.description {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  margin: 0;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  text-align: left;
+
+  background-color: rgba(33, 150, 243, 0.9);
+  color: var(--current-white-color);
+  opacity: 0;
+
+  /* transform: translateY(101%); */
+  transition-property: opacity, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  overflow-y: auto;
+}
+
+.cards-item:hover .description {
+  opacity: 1;
+}
+
+/* .cards-thumb:hover::before {
   opacity: 1;
 }
 
@@ -719,7 +750,7 @@ address {
 
 .cards-thumb {
   position: relative;
-}
+} */
 
 /* ---------------------- Modal -----------------------*/
 
