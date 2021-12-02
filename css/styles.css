@@ -622,7 +622,7 @@ address {
   color: var(--main-title-color);
   background-color: var(--third-bg-color);
 
-  transition-property: background-color, box-shadow;
+  transition-property: background-color, color, box-shadow;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--timing-function);
 }
